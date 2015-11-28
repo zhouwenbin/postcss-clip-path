@@ -1,17 +1,19 @@
-# PostCSS clip-path
+# PostCSS polygon
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
-[PostCSS][PostCSS] PostCSS plugin that adds `clip-path` value from [clippy](http://bennettfeely.com/clippy/).
+[PostCSS][PostCSS] PostCSS plugin that adds `clip-path` and `shape-outside` value from [clippy](http://bennettfeely.com/clippy/).
 
 ```css
 .foo {
   clip-path: triangle;
+  shape-outside: triangle;
 }
 ```
 
 ```css
 .foo {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  shape-outside: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 ```
 
@@ -48,7 +50,7 @@
 ### Usage
 
 ```js
-postcss([ require('postcss-clip-path') ])
+postcss([ require('postcss-polygon') ])
 ```
 
 See [PostCSS][PostCSS] docs for examples for your environment.
@@ -65,10 +67,10 @@ MIT © [zhouwenbin](http://zhouwenbin.com)
 
 [clippy](http://bennettfeely.com/clippy/)
 
-[npm-image]: https://badge.fury.io/js/postcss-clip-path.svg
-[npm-url]: https://npmjs.org/package/postcss-clip-path
-[travis-image]: https://travis-ci.org/zhouwenbin/postcss-clip-path.svg?branch=master
-[travis-url]: https://travis-ci.org/zhouwenbin/postcss-clip-path
-[daviddm-image]: https://david-dm.org/zhouwenbin/postcss-clip-path.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/zhouwenbin/postcss-clip-path
+[npm-image]: https://badge.fury.io/js/postcss-polygon.svg
+[npm-url]: https://npmjs.org/package/postcss-polygon
+[travis-image]: https://travis-ci.org/zhouwenbin/postcss-polygon.svg?branch=master
+[travis-url]: https://travis-ci.org/zhouwenbin/postcss-polygon
+[daviddm-image]: https://david-dm.org/zhouwenbin/postcss-polygon.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/zhouwenbin/postcss-polygon
 [PostCSS]: https://github.com/postcss/postcss

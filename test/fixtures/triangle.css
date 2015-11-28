@@ -1,3 +1,4 @@
 .foo {
   clip-path: triangle;
+  shape-outside: triangle;
 }

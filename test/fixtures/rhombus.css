@@ -1,3 +1,4 @@
 .foo {
   clip-path: rhombus;
+  shape-outside: rhombus;
 }

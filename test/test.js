@@ -6,7 +6,7 @@ var postcss = require("postcss"),
     path = require("path"),
     plugin = require("../");
 
-var clipPath = {
+var polygon = {
   "triangle": "polygon(50% 0%, 0% 100%, 100% 100%)",
   "trapezoid": "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)",
   "parallelogram": "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)",
@@ -53,10 +53,10 @@ var test = function (fixture, opts, done) {
 
 };
 
-describe("postcss-clip-path", function () {
+describe("postcss-polygon", function () {
 
-  for(var i in clipPath){
-    it("sets clip-path: "+ i +" correctly", function(done) {
+  for(var i in polygon){
+    it("sets clip-path: "+ i +" and shape-outside: "+ i +" correctly ", function(done) {
      test(i, {}, done);
     });
   }

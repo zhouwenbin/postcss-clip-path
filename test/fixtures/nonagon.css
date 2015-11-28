@@ -1,3 +1,4 @@
 .foo {
   clip-path: nonagon;
+  shape-outside: nonagon;
 }

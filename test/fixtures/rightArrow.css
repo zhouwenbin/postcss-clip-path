@@ -1,3 +1,4 @@
 .foo {
   clip-path: rightArrow;
+  shape-outside: rightArrow;
 }

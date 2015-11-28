@@ -1,3 +1,4 @@
 .foo {
   clip-path: cross;
+  shape-outside: cross;
 }

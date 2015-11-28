@@ -1,3 +1,4 @@
 .foo {
   clip-path: frame;
+  shape-outside: frame;
 }

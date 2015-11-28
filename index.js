@@ -1,7 +1,7 @@
 "use strict";
 
 var postcss = require("postcss");
-var clipPath = {
+var polygon = {
   "triangle": "polygon(50% 0%, 0% 100%, 100% 100%)",
   "trapezoid": "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)",
   "parallelogram": "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)",
@@ -27,17 +27,26 @@ var clipPath = {
   "frame": "polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%)"
 };
 
-module.exports = postcss.plugin("postcss-clip-path", function () {
+module.exports = postcss.plugin("postcss-polygon", function () {
   return function (css) {
 
     // Run handlers through all relevant CSS decls
     css.walkDecls("clip-path", function(decl) {
 
-      if (!clipPath[decl.value]){
+      if (!polygon[decl.value]){
         return;
       }
 
-      decl.value = decl.value.replace(decl.value, clipPath[decl.value]);
+      decl.value = decl.value.replace(decl.value, polygon[decl.value]);
+    });
+
+    css.walkDecls("shape-outside", function(decl) {
+
+      if (!polygon[decl.value]){
+        return;
+      }
+
+      decl.value = decl.value.replace(decl.value, polygon[decl.value]);
     });
 
   };
