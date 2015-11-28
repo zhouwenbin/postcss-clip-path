@@ -59,6 +59,12 @@ See [PostCSS][PostCSS] docs for examples for your environment.
 
 MIT © [zhouwenbin](http://zhouwenbin.com)
 
+--
+
+### Thanks
+
+[clippy](http://bennettfeely.com/clippy/)
+
 [npm-image]: https://badge.fury.io/js/postcss-clip-path.svg
 [npm-url]: https://npmjs.org/package/postcss-clip-path
 [travis-image]: https://travis-ci.org/zhouwenbin/postcss-clip-path.svg?branch=master
